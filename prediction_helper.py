@@ -1,11 +1,11 @@
 import pandas as pd
 from joblib import load
 
-model_rest = load("artifacts_vishwa\model_rest.joblib")
-model_young = load("artifacts_vishwa\model_young.joblib")
+model_rest = load("artifacts_vishwa/model_rest.joblib")
+model_young = load("artifacts_vishwa/model_young.joblib")
 
-scaler_rest = load("artifacts_vishwa\scaler_rest.joblib")
-scaler_young = load("artifacts_vishwa\scaler_young.joblib")
+scaler_rest = load("artifacts_vishwa/scaler_rest.joblib")
+scaler_young = load("artifacts_vishwa/scaler_young.joblib")
 
 # The below function is to calculate Normalised risk score
 def calculate_normalised_risk(medical_history):
@@ -120,3 +120,4 @@ def predict(input_dict):
         prediction = model_rest.predict(input_df)
 
     return int(prediction[0])
+
